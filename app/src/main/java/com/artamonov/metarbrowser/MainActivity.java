@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView rawText;
     private TextView decodedText;
-    private TextInputEditText stationInputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rawText = findViewById(R.id.raw_data);
         decodedText = findViewById(R.id.decoded_data);
-        stationInputText = findViewById(R.id.station_name);
+        TextInputEditText stationInputText = findViewById(R.id.station_name);
 
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
@@ -47,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
 
-        viewModel.rawliveData.observe(this, new Observer<String>() {
+        viewModel.rawLiveData.observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 rawText.setText(s);
             }
         });
 
-        viewModel.decodedliveData.observe(this, new Observer<String>() {
+        viewModel.decodedLiveData.observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 decodedText.setText(s);
