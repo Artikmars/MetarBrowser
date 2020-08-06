@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Metar Browser</string>
+
+    <string name="network_error_unknown">Keine Internetverbindung</string>
+    <string name="station">Code</string>
+    <string name="ed_icao_prefix">ED</string>
+    <string name="station_name_hint">Geben Sie einen ICAO-code ein</string>
+    <string name="raw">Rohe</string>
+    <string name="decoded">Decodiert</string>
+
+</resources>
